@@ -7,6 +7,8 @@ PYBF_VERSION=$(cat artifacts/pybatfish-version.txt)
 
 python3 -m virtualenv .venv
 . .venv/bin/activate
+python --version
+
 pip install 'twine==3.7.1'
 export TWINE_USERNAME="__token__"
 
@@ -18,6 +20,7 @@ deactivate
 # Install from test PyPI
 python3 -m virtualenv testpypi
 . testpypi/bin/activate
+python --version
 
 # Max retries before giving up on installing from PyPI
 # Need retries because sometimes it takes a little while for newly uploaded package to propagate
