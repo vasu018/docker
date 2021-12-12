@@ -7,7 +7,7 @@ PYBF_VERSION=$(cat artifacts/pybatfish-version.txt)
 
 python3 -m virtualenv .venv
 . .venv/bin/activate
-pip install 'twine==3.1.1'
+pip install 'twine==3.7.1'
 export TWINE_USERNAME="__token__"
 
 echo "Uploading Pybf to test-PyPI"
